@@ -17,7 +17,7 @@ const init = () => {
 	// cube = new THREE.Mesh( geometry, material );
 	// scene.add(cube);
 
-	loader.load('three-trial/models/trial.STL', (stl) => {
+	loader.load('models/trial.STL', (stl) => {
 		model = new THREE.Mesh(stl, material)
 		scene.add(model)
 	}, undefined, (error) => console.log(error))
