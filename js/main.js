@@ -20,6 +20,8 @@ const init = () => {
 	loader.load('models/trial.STL', (stl) => {
 		model = new THREE.Mesh(stl, material)
 		scene.add(model)
+
+		animate();
 	}, undefined, (error) => console.log(error))
 
 	camera.position.z = 500;
@@ -45,4 +47,3 @@ const resized = () => {
 window.addEventListener('resize', resized, false)
 
 init();
-animate();
